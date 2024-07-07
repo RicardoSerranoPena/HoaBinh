@@ -8,39 +8,31 @@
         height="50"
         alt="Trung tâm phát triển văn hóa đạo đức"
       />
-      <h1 class="header-title">Trung tâm phát triển văn hóa đạo đức</h1>
+      <h1 class="header-title hidden">Trung tâm phát triển văn hóa đạo đức</h1>
     </nuxt-link>
     <button
       class="mobile-nav-toggle"
       aria-controls="primary-nav-bar"
       aria-expanded="false"
-      @click=""
+      @click="toggleNavBar"
     >
       <span class="sr-only">Menu</span>
     </button>
     <nav>
-      <!-- <ul id="primary-nav-bar" data-visible="false" class="primary-nav-bar">
+      <ul id="primary-nav-bar" data-visible="false" class="primary-nav-bar">
         <li>
-          <nuxt-link to="/gioi-thieu">Giới Thiệu</nuxt-link>
+          <nuxt-link to="/">Giới Thiệu</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/phuong-phap-giao-duc">Phương Pháp Giáo Dục</nuxt-link>
+          <nuxt-link to="/">Phương Pháp Giáo Dục</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/tin-tuc">Tin Tức</nuxt-link>
+          <nuxt-link to="/">Tin Tức</nuxt-link>
         </li>
         <li>
-          <nuxt-link
-            v-if="$nuxt.$route.path == '/'"
-            to="/#tuyen-sinh"
-            class="clr-accent"
-            >Tuyển Sinh</nuxt-link
-          >
-          <nuxt-link v-else to="/tuyen-sinh" class="clr-accent"
-            >Tuyển Sinh</nuxt-link
-          >
+          <nuxt-link to="/">Tuyển Sinh</nuxt-link>
         </li>
-      </ul> -->
+      </ul>
     </nav>
   </header>
 </template>
@@ -53,23 +45,23 @@ export default {
       navBarToggle: '',
     }
   },
-  // mounted() {
-  //   this.primaryNav = this.$nuxt.$el.querySelector('.primary-nav-bar')
-  //   this.navBarToggle = this.$nuxt.$el.querySelector('.mobile-nav-toggle')
-  // },
-  // methods: {
-  //   toggleNavBar() {
-  //     const visibility = this.primaryNav.getAttribute('data-visible')
+  mounted() {
+    this.primaryNav = this.$el.querySelector('.primary-nav-bar')
+    this.navBarToggle = this.$el.querySelector('.mobile-nav-toggle')
+  },
+  methods: {
+    toggleNavBar() {
+      const visibility = this.primaryNav.getAttribute('data-visible')
 
-  //     if (visibility === 'false') {
-  //       this.primaryNav.setAttribute('data-visible', true)
-  //       this.navBarToggle.setAttribute('aria-expanded', true)
-  //     } else {
-  //       this.primaryNav.setAttribute('data-visible', false)
-  //       this.navBarToggle.setAttribute('aria-expanded', false)
-  //     }
-  //   },
-  // },
+      if (visibility === 'false') {
+        this.primaryNav.setAttribute('data-visible', true)
+        this.navBarToggle.setAttribute('aria-expanded', true)
+      } else {
+        this.primaryNav.setAttribute('data-visible', false)
+        this.navBarToggle.setAttribute('aria-expanded', false)
+      }
+    },
+  },
 }
 </script>
 

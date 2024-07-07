@@ -4,16 +4,18 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-  <div hidden>
-    <h1>Sống Đạo Đức</h1>
-    <h2 class="subtitle">Không Làm Khổ Mình, Khổ Người, Khổ Chúng Sinh</h2>
-  </div>
-  <div>
-    <h1>
-      Trung tâm phát triển <br />
-      văn hóa đạo đức
-    </h1>
-  </div>
+  <main>
+    <div class="hero-desktop" hidden>
+      <h1>Sống Đạo Đức</h1>
+      <h2 class="subtitle">Không Làm Khổ Mình, Khổ Người, Khổ Chúng Sinh</h2>
+    </div>
+    <div class="hero-mobile">
+      <h1>
+        Trung tâm phát triển <br />
+        văn hóa đạo đức
+      </h1>
+    </div>
+  </main>
 </template>
 
 <style scoped>
