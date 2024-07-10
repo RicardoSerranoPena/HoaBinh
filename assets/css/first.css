@@ -99,15 +99,15 @@ p {
 
 h1 {
   font-family: var(--ff-title);
-  font-size: 2.125rem;
-  font-size: clamp(2.125rem, 1.925rem + 1vw, 3.125rem);
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.8rem + 1vw, 3.125rem);
 }
 
 h2,
 h3 {
   font-family: var(--ff-title);
-  font-size: 2rem;
-  font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
+  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1.1rem + 1vw, 3rem);
 }
 
 p {
@@ -140,6 +140,10 @@ section {
   border: 0;
   outline: 0;
 }
+
+/*--------------
+      Nav Bar 
+  --------------*/
 
 .nav-header {
   position: fixed;
@@ -188,17 +192,13 @@ section {
   text-decoration: underline;
 }
 
-/*--------------
-      Nav Bar 
-  --------------*/
-
 @media only screen and (max-width: 699px) {
   .primary-nav-bar {
     gap: 2em;
     font-size: larger;
 
     position: fixed;
-    inset: 0 0 33% 0;
+    inset: 0 0 40% 0;
     z-index: 500;
 
     flex-direction: column;
@@ -207,6 +207,8 @@ section {
 
     transform: translateY(-83%);
     transition: transform 300ms ease-out;
+    background-color: var(--clr-text-light);
+    /* box-shadow: var(--bx-shadow); */
   }
 
   .primary-nav-bar[data-visible='true'] {
@@ -256,8 +258,87 @@ section {
   }
 }
 
+/* 
+Home Page
+ */
+
 .hero-mobile {
   padding: 1.5rem 0;
-  margin-top: 4rem;
+  margin-top: 5rem;
   outline: 1px solid grey;
+}
+
+.cards {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  /* text-align: lefty; */
+
+  /* width: 17rem; */
+  /* margin: 0 0.25em 1em; */
+}
+
+/* .card:hover {
+  box-shadow: var(--bx-shadow-hover);
+  transform: var(--transform-hover);
+  transition: var(--transition-hover);
+} */
+
+.recent-blogs .card {
+  color: var(--clr-text-dark);
+}
+
+.card-title {
+  font-size: clamp(1.2rem, 0.84rem + 0.8vw, 1.3rem);
+}
+
+.card-body {
+  padding: 0.7rem 0;
+  line-height: 1.4em;
+  color: grey;
+  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.8rem + 0.8vw, 1.1rem);
+}
+
+.card-img-wrapper {
+  max-height: 15rem;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+img.card-img {
+  width: 100%;
+  max-width: 40rem;
+  object-fit: cover;
+  /* background-color: var(--clr-primary);
+  background-image: url(~/assets/images/hb-medium.webp);
+  background-position: center;
+  background-size: 22rem; */
+}
+
+.card .date {
+  color: var(--clr-secondary);
+  font-size: 0.8rem;
+}
+
+.card .labels {
+  display: flex;
+  gap: 0.5em;
+  font-size: 0.8em;
+  color: var(--clr-text-light);
+}
+
+.card .labels .label {
+  background-color: var(--clr-secondary);
+  border-radius: var(--border-rd-all);
+  padding: 0.2em 0.4em;
 }
