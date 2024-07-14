@@ -1,0 +1,154 @@
+/*--------------
+  Variables 
+--------------*/
+:root {
+  /* colors */
+  --clr-primary: #30609d;
+  --clr-secondary: #d19f2d;
+  --clr-tertiary: #183150;
+  --clr-accent: #d34a5a;
+  --clr-text-dark: #474747;
+  --clr-text-light: #fdf9e4;
+
+  /* fonts */
+  --ff-title: 'Lora', Georgia, Serif;
+  --ff-sans: 'Be Vietnam Pro', Tahoma, Arial, sans-serif;
+
+  /* effects */
+  --bx-shadow-hover: 0px 6px 6px 0px rgba(0, 0, 0, 0.3);
+  --bx-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --drop-shadow-logo: drop-shadow(10px 10px 10px rgba(71, 71, 71, 0.25));
+  --drop-shadow: drop-shadow(10px 10px 10px rgba(71, 71, 71, 0.2));
+  --border-rd-btm: 0 0 0.8em 0.8em;
+  --border-rd-top: 0.8em 0.8em 0 0;
+  --border-rd-all: 0.8em;
+  --transform-hover: translateY(max(-10%, -0.65rem));
+  --transition-hover: 350ms ease;
+  --transform-hover-off: translateY(0%);
+  --transition-hover-off: 200ms ease;
+}
+
+/*--------------
+  Footer
+--------------*/
+footer {
+  position: relative;
+  z-index: 100;
+  margin-top: -1em;
+  border-top: 1px solid grey;
+}
+
+.footer {
+  display: grid;
+  column-gap: 1rem;
+
+  max-width: 1202px;
+  padding: 3em 1em;
+  margin-inline: auto;
+
+  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.7rem + 0.3vw, 1.125rem);
+}
+
+.footer > * {
+  padding: 1em 0 1.5em;
+  align-self: center;
+}
+
+.footer .title {
+  font-size: 0.7rem;
+  font-size: clamp(0.5rem, 0.5rem + 0.3vw, 1.2rem);
+  padding-bottom: 0.5em;
+}
+
+.footer-logo-full {
+  display: none;
+}
+
+.footer-logo,
+.footer-logo-full {
+  height: auto;
+  max-width: 15rem;
+  margin: 1rem auto;
+  padding: 0;
+}
+
+/* .footer-logo:hover,
+.footer-logo-full:hover {
+} */
+
+.footer-contact-us {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1.5em 1em;
+}
+
+.footer-contact-us span,
+.footer-site-map span,
+.footer-social-media span {
+  font-weight: 600;
+  color: var(--clr-secondary);
+}
+
+.footer-contact-us a {
+  text-decoration: none;
+  color: var(--clr-text-dark);
+  font-size: 0.6rem;
+  font-size: clamp(0.6rem, 0.5rem + 0.3vw, 1.125rem);
+}
+
+.footer-site-map {
+  max-width: 15rem;
+  height: 100%;
+}
+
+ul.site-map-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.site-map-links li a {
+  display: block;
+  text-decoration: none;
+  color: var(--clr-text-dark);
+  padding-bottom: 1em;
+}
+
+.site-map-links :last-child a {
+  padding-bottom: 0;
+}
+
+.site-map-links a:hover,
+.footer-contact-us a:hover {
+  color: var(--clr-secondary);
+  text-decoration: underline;
+}
+
+.footer-social-media .social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social-media .social-media a {
+  transform: var(--transform-hover-off);
+  transition: var(--transition-hover-off);
+}
+
+.footer-social-media .social-media a:hover {
+  transform: var(--transform-hover);
+  transition: var(--transition-hover);
+}
+
+.social-media img {
+  width: 2rem;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+.social-media .phone-svg img {
+  width: 2.2rem;
+  height: 2rem;
+}
