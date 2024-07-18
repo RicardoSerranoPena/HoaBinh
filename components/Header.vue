@@ -21,7 +21,7 @@
     <nav>
       <ul id="primary-nav-bar" data-visible="false" class="primary-nav-bar">
         <li>
-          <nuxt-link to="/">Giới Thiệu</nuxt-link>
+          <nuxt-link to="/gioi-thieu">Giới Thiệu</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/">Phương Pháp Giáo Dục</nuxt-link>

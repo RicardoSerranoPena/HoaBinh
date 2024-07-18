@@ -114,6 +114,11 @@ p {
   margin-bottom: 0.85em;
 }
 
+.section-title {
+  margin: 1em 0;
+  text-align: center;
+}
+
 /* --- */
 
 .page {
@@ -154,6 +159,7 @@ section {
   align-items: center;
   align-content: space-between;
   padding: 0.5em;
+  background-color: var(--clr-text-light);
 }
 
 .nav-header img.logo {
