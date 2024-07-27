@@ -24,7 +24,7 @@
           <nuxt-link to="/gioi-thieu">Giới Thiệu</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">Phương Pháp Giáo Dục</nuxt-link>
+          <nuxt-link to="/tin-tuc">Tin Tức</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/">Tin Tức</nuxt-link>

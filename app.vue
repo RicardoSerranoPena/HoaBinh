@@ -6,7 +6,4 @@
   </div>
 </template>
 
-<script>
-import '~/assets/css/first.css'
-import '~/assets/css/styles.css'
-</script>
+<script setup lang="ts"></script>

@@ -27,8 +27,8 @@
 
         <span>Email</span>
         <!-- <img src="~/assets/images/envelope-solid-dark.svg" /> -->
-        <a href="mailto:trungtamphattriendaoduc@gmail.com"
-          >trungtamphattriendaoduc@gmail.com</a
+        <a href="mailto:trungtamvanhoadaoduc@gmail.com"
+          >trungtamvanhoadaoduc@gmail.com</a
         >
         <span>Website</span>
         <nuxt-link to="https://trungtamvanhoadaoduc.com/"
@@ -68,7 +68,7 @@
             />
           </a>
           <a
-            href="mailto:trungtamphattriendaoduc@gmail.com"
+            href="mailto:trungtamvanhoadaoduc@gmail.com"
             target="_blank"
             class="phone-svg"
           >
